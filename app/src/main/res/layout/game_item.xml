@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CardViewItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="8dp"
+    android:adjustViewBounds="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:adjustViewBounds="true"
+        android:orientation="vertical"
+        android:layout_gravity="">
+
+
+        <ImageView
+            android:id="@+id/imageSmallImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="center"
+            android:layout_marginBottom="8dp"
+            android:background="@color/black"
+            android:adjustViewBounds="true"
+
+            android:contentDescription="@string/game_image"
+            />
+
+        <TextView
+            android:id="@+id/TextViewGameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="@string/test_game_title"
+            android:textColor="#FFF" />
+
+        <TextView
+            android:id="@+id/TextViewGamePriceTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test_game_title"
+            android:textColor="#FFF" />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>
+
+

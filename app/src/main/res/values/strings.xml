@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">KursachGameShop2</string>
+    <string name="game_image">Обложка игры</string>
+    <string name="ps4_games">Playstation 4</string>
+    <string name="xone_games">Xbox One</string>
+    <string name="game_price">ЦЕНА RUB</string>
+    <string name="test_game_title">Название игры</string>
+    <string name="nintendo_switch_games">Nintendo Switch</string>
+    <string name="add_to_favourite">Объект добавлен</string>
+    <string name="delete_from_favourite">Объект удален</string>
+    <string name="item_main">Главная</string>
+    <string name="item_favourite">Избранное</string>
+    <string name="play_trailer">Запустить трейлер</string>
+    <string name="search_bar">Поиск</string>
+    <string name="congratz">\"Поздравляем, вы купили  - \"</string>
+    <string name="amount">Сумма :</string>
+    <string name="valuesRub">RUB</string>
+    <string name="email">Почта :</string>
+    <string name="buyButton">Оплатить</string>
+    <string name="infoGameBuy">Информация о продукте :</string>
+    <string name="card_number">Номер карты :</string>
+    <string name="hint_card_number">XXXX - XXXX - XXXX - XXXX</string>
+    <string name="cvc">CVC :</string>
+    <string name="card_date">Срок действия карты :</string>
+    <string name="telephone_number">Номер телефона :</string>
+    <string name="date_card_hint">01/2002</string>
+    <string name="telephone_hint">+ 7 918 111 22 33</string>
+</resources>
