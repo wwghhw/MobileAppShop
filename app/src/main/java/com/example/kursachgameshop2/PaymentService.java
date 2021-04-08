@@ -14,6 +14,9 @@ import android.widget.Toast;
 import com.example.kursachgameshop2.data.Game;
 import com.example.kursachgameshop2.data.MainViewModel;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class PaymentService extends AppCompatActivity {
 
 
@@ -67,12 +70,55 @@ public class PaymentService extends AppCompatActivity {
         String mail = editTextMail.getText().toString().trim();
 
 
-        if(cardNumber.length() == 12 && CVC.length() == 3 && cardDate.length() == 4 && telephoneNumber.length() == 11){
+        if(validateCVC(CVC) && validateDateCard(cardDate) && validateCardNumber(cardNumber) && validateTelephoneNumber(telephoneNumber)){
             Intent intent = new Intent(this, ActivityPurchase.class);
             startActivity(intent);
+        }else {
+            Toast.makeText(this, "Неверный ввод данных", Toast.LENGTH_SHORT).show();
         }
 
-
-
     }
+
+
+    public boolean validateCardNumber(String cardNumber){
+        boolean b = Pattern.matches("^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\\d{3})\\d{11})$",cardNumber);
+        if(b){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public boolean validateTelephoneNumber(String telephoneNumber){
+
+        boolean b = Pattern.matches("^\\+?[78][-\\(]?\\d{3}\\)?-?\\d{3}-?\\d{2}-?\\d{2}$",telephoneNumber);
+        if(b){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public boolean validateCVC(String CVC){
+
+        boolean b = Pattern.matches("^[0-9]{3}$",CVC);
+        if(b){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+
+    public boolean validateDateCard(String dateCard){
+
+        boolean b = Pattern.matches("^(?:0?[1-9]|1[0-2]) *\\/ *[1-9][0-9]$",dateCard);
+        if(b){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+
 }
