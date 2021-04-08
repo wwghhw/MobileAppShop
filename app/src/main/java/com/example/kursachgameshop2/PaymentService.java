@@ -70,7 +70,7 @@ public class PaymentService extends AppCompatActivity {
         String mail = editTextMail.getText().toString().trim();
 
 
-        if(validateCVC(CVC) && validateDateCard(cardDate) && validateCardNumber(cardNumber) && validateTelephoneNumber(telephoneNumber)){
+        if(validateCVC(CVC) && validateDateCard(cardDate) && validateCardNumber(cardNumber) && validateTelephoneNumber(telephoneNumber) && validateEmail(mail)){
             Intent intent = new Intent(this, ActivityPurchase.class);
             startActivity(intent);
         }else {
@@ -113,6 +113,18 @@ public class PaymentService extends AppCompatActivity {
     public boolean validateDateCard(String dateCard){
 
         boolean b = Pattern.matches("^(?:0?[1-9]|1[0-2]) *\\/ *[1-9][0-9]$",dateCard);
+        if(b){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+
+
+    public boolean validateEmail(String dateCard){
+
+        boolean b = Pattern.matches("^([a-z0-9_-]+\\.)*[a-z0-9_-]+@[a-z0-9_-]+(\\.[a-z0-9_-]+)*\\.[a-z]{2,6}$",dateCard);
         if(b){
             return true;
         }else {
