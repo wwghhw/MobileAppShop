@@ -138,6 +138,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:gravity="center"
+                android:onClick="buyButton"
                 android:text="@string/buyButton"
                 android:textColor="@color/white" />
         </LinearLayout>
