@@ -3,6 +3,7 @@ package com.example.kursachgameshop2;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -59,7 +60,19 @@ public class PaymentService extends AppCompatActivity {
     }
 
     public void buyButton(View view) {
-        Toast.makeText(this, "Спасибо за покупку", Toast.LENGTH_SHORT).show();
+        String cardNumber = editTextCardNumber.getText().toString().trim();
+        String CVC = editTextCVC.getText().toString().trim();
+        String cardDate = editTextDateCard.getText().toString().trim();
+        String telephoneNumber = editTextTelephoneNumber.getText().toString().trim();
+        String mail = editTextMail.getText().toString().trim();
+
+
+        if(cardNumber.length() == 12 && CVC.length() == 3 && cardDate.length() == 4 && telephoneNumber.length() == 11){
+            Intent intent = new Intent(this, ActivityPurchase.class);
+            startActivity(intent);
+        }
+
+
 
     }
 }
