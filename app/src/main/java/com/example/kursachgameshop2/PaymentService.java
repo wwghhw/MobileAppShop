@@ -3,7 +3,6 @@ package com.example.kursachgameshop2;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,8 +12,10 @@ import android.widget.Toast;
 
 import com.example.kursachgameshop2.data.Game;
 import com.example.kursachgameshop2.data.MainViewModel;
+import com.example.kursachgameshop2.formatTextWatcher.CurrencyTextWatcherCardDate;
+import com.example.kursachgameshop2.formatTextWatcher.CurrencyTextWatcherCardNumber;
+import com.example.kursachgameshop2.formatTextWatcher.CurrencyTextWatcherTelephone;
 
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PaymentService extends AppCompatActivity {
@@ -60,13 +61,21 @@ public class PaymentService extends AppCompatActivity {
         textViewGamePrice.setText(game.getPrice());
 
 
+        editTextCardNumber.addTextChangedListener(new CurrencyTextWatcherCardNumber());
+        editTextDateCard.addTextChangedListener(new CurrencyTextWatcherCardDate());
+        editTextTelephoneNumber.addTextChangedListener(new CurrencyTextWatcherTelephone());
+
     }
 
     public void buyButton(View view) {
-        String cardNumber = editTextCardNumber.getText().toString().trim();
+
+        String cardNumber = editTextCardNumber.getText().toString().replace(" - ","").trim();
         String CVC = editTextCVC.getText().toString().trim();
         String cardDate = editTextDateCard.getText().toString().trim();
-        String telephoneNumber = editTextTelephoneNumber.getText().toString().trim();
+        String telephoneNumber = editTextTelephoneNumber.getText().toString().
+                replace("+","").replace(" - ","").
+                replace(" (","").replace(") ","").
+                trim();
         String mail = editTextMail.getText().toString().trim();
 
 
