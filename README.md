@@ -13,10 +13,10 @@
 
 Скрины всех активностей :
 
-Активность с купленной игрой - https://ic.wampi.ru/2021/05/19/buyGame.jpg
-Активность с детальной информацией об игре - https://ic.wampi.ru/2021/05/19/detailActivity.jpg
-Активность с историей покупок пользователя - https://ic.wampi.ru/2021/05/19/history_by.jpg
-Активность с оплатой игры - https://ic.wampi.ru/2021/05/19/paymentActivity.jpg
-Активность с авторизацией - https://ic.wampi.ru/2021/05/19/regActivity.jpg
-Активность с избранными играми пользователя - https://ic.wampi.ru/2021/05/19/wishlistActivity.jpg
-Главный экран приложения - https://ic.wampi.ru/2021/05/19/mainActivity.jpg
+Активность с купленной игрой - https://ic.wampi.ru/2021/05/19/buyGame.jpg  
+Активность с детальной информацией об игре - https://ic.wampi.ru/2021/05/19/detailActivity.jpg  
+Активность с историей покупок пользователя - https://ic.wampi.ru/2021/05/19/history_by.jpg  
+Активность с оплатой игры - https://ic.wampi.ru/2021/05/19/paymentActivity.jpg  
+Активность с авторизацией - https://ic.wampi.ru/2021/05/19/regActivity.jpg  
+Активность с избранными играми пользователя - https://ic.wampi.ru/2021/05/19/wishlistActivity.jpg  
+Главный экран приложения - https://ic.wampi.ru/2021/05/19/mainActivity.jpg  
