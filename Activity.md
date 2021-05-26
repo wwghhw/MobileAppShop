@@ -1,1 +1,1 @@
-![Главная активность](/ActivityImages/mainActivity.jpg  "Главная активность")
+![Главная активность](/ActivityImages/MainActivity.jpg  "Главная активность")
